@@ -2,6 +2,8 @@ def oxford_comma(array)
 	str = ''
 	if(array.length == 1)
 		return array[0]
+	elsif(array.length = 2)
+		return array[0] + " and " + array[1]
 	end
 	array.each_with_index do |ele, i|
 		if(i == array.length - 2)
@@ -12,5 +14,5 @@ def oxford_comma(array)
 			str += ele + ", "
 		end
 	end
-puts str
+return str
 end
