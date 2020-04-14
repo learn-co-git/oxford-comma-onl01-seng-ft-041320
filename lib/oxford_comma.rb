@@ -8,11 +8,11 @@ def oxford_comma(array)
 	end
 	array.each_with_index do |ele, i|
 		if(i == array.length - 2)
-			str += ele + ", and"
+			str += ele + ", and "
 		elsif(i == array.length - 1)
 			str += ele
 		else
-			str += ele + ","
+			str += ele + ", "
 		end
 	end
 return str
