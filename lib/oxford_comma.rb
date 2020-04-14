@@ -1,14 +1,16 @@
 def oxford_comma(array)
-	arr = []
+	str = ''
+	if(array.length == 1)
+		return array[0]
+	end
 	array.each_with_index do |ele, i|
-		str = ''
-		if(ele == array[array.length - 1])
-			str = "and " + ele
-			arr << str
+		if(i == array.length - 2)
+			str += ele + ", and "
+		elsif(i == array.length - 1)
+			str += ele
 		else
-			str = ele + ", "
-			arr << str
+			str += ele + ", "
 		end
 	end
-		puts arr.join()
+puts str
 end
